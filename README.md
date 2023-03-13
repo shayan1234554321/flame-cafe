@@ -33,7 +33,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Leader Board] <a name="about-project"></a>
+# 📖 [Flame Cafe] <a name="about-project"></a>
 
 > The Flame-cafe website displays Meals form an external API. It also allows visitors to like, make a comment and reservation. All data is preserved thanks to the external Meals DB API service.
 
