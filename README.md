@@ -103,7 +103,7 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
-```git clone https://github.com/shayan1234554321/flame-cafe
+```git clone https://github.com/shayan1234554321/flame-cafe```
 
 - [ ] Open the file in your code editor
 
