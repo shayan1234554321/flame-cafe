@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
 
 :root {
-  --font-family-main: 'Poppins', sans-serif;;
+  --font-family-main: 'Poppins', sans-serif;
   --background-color: black;
-  --red: #DE0000;
+  --red: #de0000;
 }
 
 * {
@@ -13,9 +13,8 @@
   font-family: var(--font-family-main);
 }
 
-
 body {
-  background-color: var( --background-color );
+  background-color: var(--background-color);
   color: white;
   display: flex;
   flex-direction: column;
@@ -105,6 +104,7 @@ footer .footer-container {
   font-weight: 300;
   color: #b8b8b8;
 }
-.cafe-text{
+
+.cafe-text {
   color: #b8b8b8;
 }

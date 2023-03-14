@@ -1,3 +1,2 @@
 import './style.css';
-import './modules/importing-images'
-
+import './modules/importing-images.js';
