@@ -3,7 +3,7 @@ import './modules/importing-images.js';
 import {
   searchByLetter, searchByName, giveLike, getLike,
 } from './modules/API.js';
-import commentPopup from './modules/commentPopup.js';
+import handleItemsCount from './modules/pagination.js';
 
 // -------- constants --------------
 
@@ -12,6 +12,7 @@ const items = document.getElementById('items');
 const pagination = document.getElementById('pagination');
 const search = document.getElementById('search');
 const searchInput = document.getElementById('searchInput');
+const itemsCount = document.getElementById('items-count');
 let meals = [];
 let likes = [];
 
@@ -42,6 +43,7 @@ const handleChecked = (id, label, checkbox) => {
 
 const loadHtmlContent = (pageNum) => {
   items.innerHTML = '';
+  itemsCount.innerHTML = handleItemsCount(meals);
   if (meals.length > 0) {
     for (let i = (pageNum * 10) - 10; i < (pageNum * 10) + 2; i += 1) {
       const li = document.createElement('li');
@@ -134,11 +136,6 @@ const loadHtmlPagination = () => {
 };
 
 // -------- event listeners  ------
-// const commentBtn = document.querySelectorAll('.comment');
-
-// commentBtn.forEach((button) => button.addEventListener('click', () => {
-commentPopup();
-// }));
 
 window.addEventListener('DOMContentLoaded', () => {
   searchByLetter(defaultSearchLetter).then((res) => {

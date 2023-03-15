@@ -4,17 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flame Cafe</title>
-    <link rel="icon" href="./images/logo.png">
 <script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script></head>
 <body>
     <nav>
-        <img src="./assets/logo.png" alt="Logo">
-        <ul>
-            <li class="selected" >Home</li>
-            <li>search</li>
-            <li>more</li>
-        </ul>
+        <div>
+            <img id="logo" alt="Logo">
+            <ul>
+                <li class="selected" >HOME</li>
+                <li>SEARCH</li>
+                <li>MORE</li>
+            </ul>
+        </div>
     </nav>
-    <footer></footer>
+
+    <section class="landingPage" ></section>
+    <section class="gallery" >
+        <div class="gallery-top" >
+            <h2>Our Gallery</h2>
+            <div class="inputContainer">
+                <form id="search">
+                    <input type="text" id="searchInput" placeholder="search" required minlength="1">
+                </form>
+            </div>
+        </div>
+        <div class="gallery-container">
+            <h4>Total: <span id="items-count" >15</span> </h4>
+            <ul class="items" id="items">
+                <!-- <li>       Example li
+                    <img id="example" alt="">
+                    <h4 class="itemName" ><b> <p> Bakewell Tart </p> </b></h4>
+                    <h4>Dessert</h4>
+                    <ul class="tags-container" >
+                        <li>Tart</li>
+                        <li>Baking</li>
+                        <li>Meat</li>
+                    </ul>
+                    <div class="line"></div>
+                    <div class="interactions">
+                        <label class="like">
+                            <input style="display: none;" type="checkbox"/>
+                            <div class="hearth"></div>
+                        </label>
+                        <span class="like-count" id="234234" >12</span>
+                        <span> <b>Comment</b></span>
+                    </div>
+                </li> -->
+            </ul>
+            <ul class="pagination" id="pagination">
+            </ul>
+        </div>
+    </section>
+    <section class="popup" >
+       
+    </section>
+
+    <footer>
+        <div><b>Flame</b><span class="cafe-text"> Cafe</span></div>
+        <div class="footer-container">
+            <p class="license">&copy;MIT License</p>
+            <div class="social-icon-and-name">
+                    <p>Shayan</p>
+                    <ul>
+                        <li><a href=""><img src="" alt="github" class="github"></a></li>
+                        <li><a href=""><img src="" alt="instagram" class="instagram"></a></li>
+                        <li><a href=""><img src="" alt="linkedin" class="linkedin"></a></li>
+                    </ul>
+                    <p>Muhammed</p>
+                    <ul>
+                        <li><a href=""><img src="" alt="github" class="github"></a></li>
+                        <li><a href=""><img src="" alt="instagram" class="instagram"></a></li>
+                        <li><a href=""><img src="" alt="linkedin" class="linkedin"></a></li>
+                    </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
