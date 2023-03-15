@@ -194,10 +194,6 @@ npm run deploy
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **[Shayan - Landing Page]**
-- [ ] **[Shayan - comment popup]**
-- [ ] **[Shayan - Testing]**
-
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
