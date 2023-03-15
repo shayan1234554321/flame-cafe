@@ -1,21 +1,21 @@
 import './style.css';
 import './modules/importing-images.js';
-import { searchByLetter } from './modules/API';
+import { searchByLetter } from './modules/API.js';
 
 // -------- constants --------------
 
-const defaultSearchLetter = "b"
-const items = document.getElementById('items')
-const pagination = document.getElementById('pagination')
-let meals = []
+const defaultSearchLetter = 'b';
+const items = document.getElementById('items');
+const pagination = document.getElementById('pagination');
+let meals = [];
 // -------- functions --------------
 
 const loadHtmlContent = (pageNum) => {
-    items.innerHTML = ''
-    let toAdd = ''
+  items.innerHTML = '';
+  let toAdd = '';
 
-    for(let i = pageNum * 10 ; i < ((pageNum + 1) * 10)+2 ; i++){
-        toAdd += `
+  for (let i = pageNum * 10; i < ((pageNum + 1) * 10) + 2; i += 1) {
+    toAdd += `
             <li id='${meals[i].idMeal}' >
                 <img alt="Meal Image" src=' ${meals[i].strMealThumb} ' >
                 <h4><b>${meals[i].strMeal}</b></h4>
@@ -23,7 +23,7 @@ const loadHtmlContent = (pageNum) => {
                 <ul class="tags-container" >
                     <li>${meals[i].strIngredient1}</li>
                     <li>${meals[i].strIngredient2}</li>
-                    ${(meals[i].strIngredient1.length + meals[i].strIngredient2.length < 15 )? `<li>${ meals[i].strIngredient3}</li>`:"" }
+                    ${(meals[i].strIngredient1.length + meals[i].strIngredient2.length < 15) ? `<li>${meals[i].strIngredient3}</li>` : ''}
                 </ul>
                 <div class="line"></div>
                 <div class="interactions">
@@ -35,28 +35,27 @@ const loadHtmlContent = (pageNum) => {
                     <span> <b>Comment</b></span>
                 </div>
             </li>
-        `
-        if(i === meals.length)break
-    }
-    items.innerHTML = toAdd
-}
+        `;
+    if (i === meals.length) break;
+  }
+  items.innerHTML = toAdd;
+};
 
 const loadHtmlPagination = () => {
-    let toAdd = "<li class='selected' >1</li>"
-    pagination.innerHTML = ""
-    for( let i = 2 ; i <= Math.ceil(meals.length / 10) ; i++ ){
-        toAdd += `<li>${i}</li>`
-    }
-    pagination.innerHTML = toAdd
-}
+  let toAdd = "<li class='selected' >1</li>";
+  pagination.innerHTML = '';
+  for (let i = 2; i <= Math.ceil(meals.length / 10); i += 1) {
+    toAdd += `<li>${i}</li>`;
+  }
+  pagination.innerHTML = toAdd;
+};
 
 // -------- event listeners  ------
 
-window.addEventListener('DOMContentLoaded', ()=>{
-    searchByLetter(defaultSearchLetter).then((res)=>{
-        console.log(res)
-        meals = res.meals
-        loadHtmlContent(0)
-        loadHtmlPagination()
-    })
-})
+window.addEventListener('DOMContentLoaded', () => {
+  searchByLetter(defaultSearchLetter).then((res) => {
+    meals = res.meals;
+    loadHtmlContent(0);
+    loadHtmlPagination();
+  });
+});

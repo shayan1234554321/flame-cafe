@@ -72,10 +72,6 @@ nav li {
   transition: 0.3s ease-in-out;
 }
 
-nav li:hover {
-  transform: scale(1.1);
-}
-
 nav ul .selected {
   font-weight: 600;
   background-color: var(--red);
@@ -109,12 +105,6 @@ footer .footer-container {
   align-items: center;
   list-style-type: none;
   padding-inline: 1rem;
-}
-
-.social-icon-and-name ul li {
-  padding-inline: 0.5rem;
-  display: flex;
-  align-items: center;
 }
 
 .license {
@@ -166,7 +156,7 @@ footer .footer-container {
   background-color: white;
   width: 2px;
   height: 20px;
-  right: 0px;
+  right: 0;
   bottom: -15px;
   transform: rotateZ(-45deg);
 }
@@ -257,7 +247,7 @@ footer .footer-container {
 
 #like-count {
   position: absolute;
-  left: calc( var(--heart-size) - 15px ) ;
+  left: calc(var(--heart-size) - 15px);
 }
 
 .pagination {
@@ -275,6 +265,16 @@ footer .footer-container {
   justify-content: center;
   font-size: 20px;
   border: 2px solid white;
+}
+
+nav li:hover {
+  transform: scale(1.1);
+}
+
+.social-icon-and-name ul li {
+  padding-inline: 0.5rem;
+  display: flex;
+  align-items: center;
 }
 
 .pagination li:nth-last-child(1) {
@@ -311,7 +311,7 @@ footer .footer-container {
 }
 
 input:checked + .hearth {
-  animation: like 1s steps(calc(var(--frames) - 3));  
+  animation: like 1s steps(calc(var(--frames) - 3));
   animation-fill-mode: forwards;
 }
 
@@ -319,6 +319,7 @@ input:checked + .hearth {
   0% {
     background-position-x: 0;
   }
+
   100% {
     background-position-x: calc(var(--heart-size) * (var(--frames) * -1 + 3));
   }
