@@ -407,7 +407,7 @@ input:checked + .hearth {
   width: 100%;
   min-height: 100vh;
   backdrop-filter: blur(8px);
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
 }
