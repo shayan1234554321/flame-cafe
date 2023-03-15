@@ -195,9 +195,7 @@ npm run deploy
 
 - [ ] **[Shayan - Landing Page]**
 - [ ] **[Shayan - Do the mobile version]**
-- [ ] **[Shayan - Pagination working]**
-- [ ] **[Shayan - Search input working]**
-- [ ] **[Shayan - Likes and comment popup]**
+- [ ] **[Shayan - comment popup]**
 - [ ] **[Shayan - Testing]**
 
 
