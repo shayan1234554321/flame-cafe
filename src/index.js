@@ -3,6 +3,7 @@ import './modules/importing-images.js';
 import {
   searchByLetter, searchByName, giveLike, getLike,
 } from './modules/API.js';
+import commentPopup from './modules/commentPopup.js';
 
 // -------- constants --------------
 
@@ -133,6 +134,11 @@ const loadHtmlPagination = () => {
 };
 
 // -------- event listeners  ------
+// const commentBtn = document.querySelectorAll('.comment');
+
+// commentBtn.forEach((button) => button.addEventListener('click', () => {
+commentPopup();
+// }));
 
 window.addEventListener('DOMContentLoaded', () => {
   searchByLetter(defaultSearchLetter).then((res) => {
