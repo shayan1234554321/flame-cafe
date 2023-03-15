@@ -193,8 +193,13 @@ npm run deploy
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Use async and await JavaScript features to consume the API]**
-- [ ] **[Better styling]**
+- [ ] **[Shayan - Landing Page]**
+- [ ] **[Shayan - Do the mobile version]**
+- [ ] **[Shayan - Pagination working]**
+- [ ] **[Shayan - Search input working]**
+- [ ] **[Shayan - Likes and comment popup]**
+- [ ] **[Shayan - Testing]**
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
