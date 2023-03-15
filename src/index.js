@@ -51,6 +51,7 @@ const loadHtmlContent = (pageNum) => {
       image.src = meals[i].strMealThumb;
 
       const itemName = document.createElement('h4');
+      itemName.className = 'itemName';
       itemName.innerHTML = `<b><p>${meals[i].strMeal}</p></b>`;
 
       const itemCategory = document.createElement('h4');
