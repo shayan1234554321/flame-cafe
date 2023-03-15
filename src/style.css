@@ -233,6 +233,15 @@ footer .footer-container {
   overflow: hidden;
 }
 
+.form-section p {
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+
+.comments-and-username p {
+  font-size: 0.8rem;
+}
+
 .items > li .itemName p {
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -487,10 +496,6 @@ button {
   padding: 0.5rem;
 }
 
-.comments-and-username p {
-  font-size: 0.8rem;
-}
-
 .comments-and-username::-webkit-scrollbar {
   width: 0.2em;
 }
@@ -503,11 +508,6 @@ button {
   background-color: #ccc;
   outline: 1px solid slategrey;
   border-radius: 0.2em;
-}
-
-.form-section p {
-  font-weight: 600;
-  padding-bottom: 1rem;
 }
 
 #addCommentForm {
