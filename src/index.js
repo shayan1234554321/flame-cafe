@@ -54,9 +54,9 @@ const loadHtmlPagination = () => {
 // -------- event listeners  ------
 const commentBtn = document.querySelectorAll('.comment');
 
-commentBtn.forEach((button) => button.addEventListener('click',()=>{
-    commentPopup();
-}))
+commentBtn.forEach((button) => button.addEventListener('click', () => {
+  commentPopup();
+}));
 
 window.addEventListener('DOMContentLoaded', () => {
   searchByLetter(defaultSearchLetter).then((res) => {
@@ -65,4 +65,3 @@ window.addEventListener('DOMContentLoaded', () => {
     loadHtmlPagination();
   });
 });
-
