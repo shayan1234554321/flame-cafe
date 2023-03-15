@@ -194,7 +194,6 @@ npm run deploy
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **[Shayan - Landing Page]**
-- [ ] **[Shayan - Do the mobile version]**
 - [ ] **[Shayan - comment popup]**
 - [ ] **[Shayan - Testing]**
 
