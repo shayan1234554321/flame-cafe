@@ -22,6 +22,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 h2 {
@@ -124,6 +125,34 @@ footer .footer-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery::after {
+  content: '';
+  position: absolute;
+  background-image: url('./assets/chilli.png');
+  background-position: center;
+  background-size: cover;
+  width: 150px;
+  aspect-ratio: 1/2;
+  top: 20%;
+  left: -50px;
+  z-index: -2;
+}
+
+.gallery::before {
+  content: '';
+  position: absolute;
+  background-image: url('./assets/tomato.png');
+  background-position: center;
+  background-size: cover;
+  width: 160px;
+  aspect-ratio: 1/1;
+  bottom: 30%;
+  right: -60px;
+  z-index: -2;
 }
 
 .gallery-top {
@@ -150,6 +179,10 @@ footer .footer-container {
   color: white;
 }
 
+.gallery-top input::placeholder {
+  color: rgba(255, 255, 255, 0.728);
+}
+
 .gallery-top .inputContainer::after {
   content: '';
   position: absolute;
@@ -165,6 +198,7 @@ footer .footer-container {
   width: 80%;
   max-width: var(--max-width-pc);
   margin-bottom: 50px;
+  position: relative;
 }
 
 .gallery-container > h4 {
@@ -177,6 +211,7 @@ footer .footer-container {
   row-gap: 40px;
   flex-wrap: wrap;
   justify-content: center;
+  min-height: 40vh;
 }
 
 .items > li {
@@ -190,6 +225,20 @@ footer .footer-container {
   position: relative;
   color: black;
   text-align: center;
+}
+
+.items > li .itemName {
+  max-height: 60px;
+  max-width: 90%;
+  overflow: hidden;
+}
+
+.items > li .itemName p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .items > li::after {
@@ -245,7 +294,7 @@ footer .footer-container {
   padding-right: 10px;
 }
 
-#like-count {
+.like-count {
   position: absolute;
   left: calc(var(--heart-size) - 15px);
 }
@@ -258,6 +307,7 @@ footer .footer-container {
 }
 
 .pagination li {
+  cursor: pointer;
   width: 35px;
   height: 35px;
   display: flex;
@@ -265,16 +315,21 @@ footer .footer-container {
   justify-content: center;
   font-size: 20px;
   border: 2px solid white;
-}
-
-nav li:hover {
-  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
 }
 
 .social-icon-and-name ul li {
   padding-inline: 0.5rem;
   display: flex;
   align-items: center;
+}
+
+nav li:hover {
+  transform: scale(1.1);
+}
+
+.pagination li:hover {
+  background-color: rgba(255, 255, 255, 0.407);
 }
 
 .pagination li:nth-last-child(1) {
@@ -285,7 +340,8 @@ nav li:hover {
   border-radius: 8px 0 0 8px;
 }
 
-.pagination .selected {
+.pagination .selectedPage {
+  pointer-events: none;
   background-color: white;
   color: black;
 }
