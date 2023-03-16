@@ -194,9 +194,6 @@ npm run deploy
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **[Shayan - Landing Page]**
-- [ ] **[Shayan - Do the mobile version]**
-
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

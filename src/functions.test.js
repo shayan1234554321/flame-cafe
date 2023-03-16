@@ -1,4 +1,4 @@
-import handleItemsCount from './modules/pagination';
+import handleItemsCount from './modules/pagination.js';
 
 const tempMeals = [
   {

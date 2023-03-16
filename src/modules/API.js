@@ -6,9 +6,8 @@ export const searchByName = async (Name) => {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error(error);
+    throw new Error('Something went wrong!');
   }
-  return 'value';
 };
 
 export const searchByLetter = async (letter) => {
@@ -17,9 +16,8 @@ export const searchByLetter = async (letter) => {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error(error);
+    throw new Error('Something went wrong!');
   }
-  return 'value';
 };
 
 export const searchById = async (id) => {
@@ -28,9 +26,8 @@ export const searchById = async (id) => {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error(error);
+    throw new Error('Something went wrong!');
   }
-  return 'value';
 };
 
 export const giveLike = async (id) => {
@@ -42,9 +39,8 @@ export const giveLike = async (id) => {
     });
     return 'worked';
   } catch (error) {
-    console.error(error);
+    throw new Error('Something went wrong!');
   }
-  return 'value';
 };
 
 export const getLike = async () => {
@@ -55,9 +51,8 @@ export const getLike = async () => {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error(error);
+    throw new Error('Something went wrong!');
   }
-  return 'value';
 };
 
 export const giveComment = async (id, name, comment) => {
@@ -67,12 +62,10 @@ export const giveComment = async (id, name, comment) => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ item_id: id, username: name, comment }),
     });
-    const data = await response.json();
-    return data;
+    return response.status;
   } catch (error) {
-    console.error(error);
+    throw new Error('Something went wrong!');
   }
-  return 'value';
 };
 
 export const getComment = async (id) => {
@@ -83,7 +76,6 @@ export const getComment = async (id) => {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error(error);
+    throw new Error('Something went wrong!');
   }
-  return 'value';
 };
