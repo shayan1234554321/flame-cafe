@@ -7,7 +7,6 @@ import {
 import commentPopup from './modules/renderPopup.js';
 import handleItemsCount from './modules/pagination.js';
 
-
 // -------- constants --------------
 
 const defaultSearchLetter = 'b';
