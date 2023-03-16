@@ -193,7 +193,7 @@ npm run deploy
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Shayan - Landing Page]**
+- [ ] **[Adding 'More' options]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
