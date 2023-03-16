@@ -26,6 +26,11 @@ body {
   overflow-x: hidden;
 }
 
+body.active {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
 h2 {
   font-size: 50px;
 }
@@ -52,6 +57,10 @@ nav {
   width: 25px;
   height: 23px;
   display: none;
+}
+
+nav.active {
+  z-index: -1;
 }
 
 nav > div {
@@ -274,9 +283,8 @@ footer .footer-container {
 }
 
 .meal-image img {
+  width: 100%;
   height: 100%;
-  background-size: contain;
-  background-position: center;
 }
 
 .items li img {
@@ -409,6 +417,14 @@ input:checked + .hearth {
 }
 
 /* ****************popup************* */
+.comment-btn {
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.comment-btn:hover {
+  transform: scale(1.1);
+}
 
 .popup {
   position: fixed;
@@ -440,15 +456,21 @@ input:checked + .hearth {
   top: 1rem;
   left: 1rem;
   width: 2rem;
+  cursor: pointer;
+}
+
+#closeBtn:hover {
+  transform: scale(1.1);
 }
 
 .meal-image {
   position: absolute;
-  right: 0;
-  top: 0;
-  max-width: 50%;
-  height: 50%;
+  right: 1rem;
+  top: 1rem;
+  max-width: 35%;
   display: flex;
+  border-radius: 50%;
+  overflow: hidden;
   justify-content: center;
   align-items: center;
 }

@@ -3,6 +3,8 @@ import './modules/importing-images.js';
 import {
   searchByLetter, searchByName, giveLike, getLike,
 } from './modules/API.js';
+
+import commentPopup from './modules/renderPopup.js';
 import handleItemsCount from './modules/pagination.js';
 
 // -------- constants --------------
@@ -97,6 +99,17 @@ const loadHtmlContent = (pageNum) => {
       // -------- comment --------
       const comment = document.createElement('span');
       comment.innerHTML = '<b>Comment</b>';
+      comment.className = 'comment-btn';
+
+      comment.addEventListener('click', () => {
+        const popupSection = document.querySelector('.popup');
+        const nav = document.getElementsByTagName('nav')[0];
+        const body = document.getElementsByTagName('body')[0];
+        body.className = 'active';
+        nav.className = 'active';
+        popupSection.style.display = 'flex';
+        commentPopup(id);
+      });
 
       interactions.append(label, likes, comment);
 
