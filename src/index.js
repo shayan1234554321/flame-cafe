@@ -3,7 +3,7 @@ import './modules/importing-images.js';
 import {
   searchByLetter, searchByName, giveLike, getLike,
 } from './modules/API.js';
-import commentPopup from './modules/commentPopup.js';
+import commentPopup from './modules/renderPopup.js';
 
 // -------- constants --------------
 
@@ -103,7 +103,7 @@ const loadHtmlContent = (pageNum) => {
         body.className = 'active';
         nav.className = 'active';
         popupSection.style.display = 'flex';
-        commentPopup();
+        commentPopup(id);
       });
 
       interactions.append(label, likes, comment);
