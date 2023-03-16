@@ -4,7 +4,7 @@
   "description": "<a name=\"readme-top\"></a>",
   "private": true,
   "scripts": {
-    "test": "jest --env=jsdom",
+    "test": "jest",
     "start": "webpack serve --open",
     "build": "webpack"
   },
@@ -41,6 +41,10 @@
     "xml-loader": "^1.2.1"
   },
   "dependencies": {
+    "@babel/preset-env": "^7.20.2",
+    "babel-jest": "^29.5.0",
+    "jest-localstorage-mock": "^2.4.26",
+    "jsdom": "^21.1.0",
     "lodash": "^4.17.21"
   }
 }

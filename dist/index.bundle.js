@@ -8,6 +8,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_importing_images_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(14);
 /* harmony import */ var _modules_API_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(19);
 /* harmony import */ var _modules_commentPopup_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(21);
+/* harmony import */ var _modules_pagination_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(24);
+
 
 
 
@@ -20,6 +22,8 @@ const items = document.getElementById('items');
 const pagination = document.getElementById('pagination');
 const search = document.getElementById('search');
 const searchInput = document.getElementById('searchInput');
+
+const itemsCount = document.getElementById('items-count');
 let meals = [];
 let likes = [];
 
@@ -50,6 +54,9 @@ const handleChecked = (id, label, checkbox) => {
 
 const loadHtmlContent = (pageNum) => {
   items.innerHTML = '';
+
+  itemsCount.innerHTML = (0,_modules_pagination_js__WEBPACK_IMPORTED_MODULE_4__["default"])(meals)
+
   if (meals.length > 0) {
     for (let i = (pageNum * 10) - 10; i < (pageNum * 10) + 2; i += 1) {
       const li = document.createElement('li');
@@ -102,6 +109,7 @@ const loadHtmlContent = (pageNum) => {
       // -------- comment --------
       const comment = document.createElement('span');
       comment.innerHTML = '<b>Comment</b>';
+
       comment.className = 'comment-btn';
 
       comment.addEventListener('click', () => {
@@ -151,6 +159,8 @@ const loadHtmlPagination = () => {
     pagination.appendChild(li);
   }
 };
+
+// -------- event listeners  ------
 
 window.addEventListener('DOMContentLoaded', () => {
   (0,_modules_API_js__WEBPACK_IMPORTED_MODULE_2__.searchByLetter)(defaultSearchLetter).then((res) => {
@@ -536,7 +546,9 @@ ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.c
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
 // Module
+
 ___CSS_LOADER_EXPORT___.push([module.id, ":root {\r\n  --font-family-main: 'Poppins', sans-serif;\r\n  --background-color: black;\r\n  --red: #de0000;\r\n  --max-width-pc: 1000px;\r\n  --heart-size: 70px;\r\n  --frames: 62;\r\n}\r\n\r\n* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n  font-family: var(--font-family-main);\r\n}\r\n\r\nbody {\r\n  background-color: var(--background-color);\r\n  color: white;\r\n  display: flex;\r\n  flex-direction: column;\r\n  min-height: 100vh;\r\n  overflow-x: hidden;\r\n}\r\n\r\nbody.active {\r\n  min-height: 100vh;\r\n  overflow: hidden;\r\n}\r\n\r\nh2 {\r\n  font-size: 50px;\r\n}\r\n\r\nh4 {\r\n  font-weight: 400;\r\n  font-size: 20px;\r\n}\r\n\r\n/* -------------------- Nav ---------------- */\r\n\r\nnav {\r\n  position: fixed;\r\n  width: 100%;\r\n  height: 70px;\r\n  display: flex;\r\n  padding: 0 60px;\r\n  justify-content: center;\r\n  background-color: rgba(0, 0, 0, 0.816);\r\n  z-index: 5;\r\n}\r\n\r\nnav.active {\r\n  z-index: -1;\r\n}\r\n\r\nnav > div {\r\n  justify-content: space-between;\r\n  display: flex;\r\n  width: 100%;\r\n  max-width: var(--max-width-pc);\r\n}\r\n\r\nnav img {\r\n  width: 70px;\r\n}\r\n\r\nnav ul {\r\n  display: flex;\r\n  align-items: center;\r\n  list-style: none;\r\n  column-gap: 50px;\r\n  letter-spacing: 2px;\r\n}\r\n\r\nnav li {\r\n  font-size: 14px;\r\n  cursor: pointer;\r\n  transform: scale(1);\r\n  transition: 0.3s ease-in-out;\r\n}\r\n\r\nnav ul .selected {\r\n  font-weight: 600;\r\n  background-color: var(--red);\r\n  padding: 5px 20px;\r\n  border-radius: 30px;\r\n}\r\n\r\n/* -------------------- Footer ---------------- */\r\n\r\nfooter {\r\n  padding: 1rem 3rem;\r\n  display: block;\r\n  color: white;\r\n  margin-top: auto;\r\n  background-color: #1b1b1b;\r\n}\r\n\r\nfooter .footer-container {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  padding-top: 0.5rem;\r\n}\r\n\r\n.social-icon-and-name {\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n\r\n.social-icon-and-name ul {\r\n  display: flex;\r\n  align-items: center;\r\n  list-style-type: none;\r\n  padding-inline: 1rem;\r\n}\r\n\r\n.license {\r\n  font-size: small;\r\n  font-weight: 300;\r\n  color: #b8b8b8;\r\n}\r\n\r\n.cafe-text {\r\n  color: #b8b8b8;\r\n}\r\n\r\n/* -------------------- Gallery ---------------- */\r\n\r\n.gallery {\r\n  padding-top: 10vh;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  overflow: hidden;\r\n  position: relative;\r\n}\r\n\r\n.gallery::after {\r\n  content: '';\r\n  position: absolute;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n  background-position: center;\r\n  background-size: cover;\r\n  width: 150px;\r\n  aspect-ratio: 1/2;\r\n  top: 20%;\r\n  left: -50px;\r\n  z-index: -2;\r\n}\r\n\r\n.gallery::before {\r\n  content: '';\r\n  position: absolute;\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\r\n  background-position: center;\r\n  background-size: cover;\r\n  width: 160px;\r\n  aspect-ratio: 1/1;\r\n  bottom: 30%;\r\n  right: -60px;\r\n  z-index: -2;\r\n}\r\n\r\n.gallery-top {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n  width: 80%;\r\n  max-width: var(--max-width-pc);\r\n}\r\n\r\n.gallery-top .inputContainer {\r\n  border: 2px solid white;\r\n  height: max-content;\r\n  font-size: 16px;\r\n  border-radius: 50px;\r\n  padding: 5px 15px;\r\n  position: relative;\r\n}\r\n\r\n.gallery-top input {\r\n  background-color: var(--background-color);\r\n  outline: none;\r\n  border: none;\r\n  color: white;\r\n}\r\n\r\n.gallery-top input::placeholder {\r\n  color: rgba(255, 255, 255, 0.728);\r\n}\r\n\r\n.gallery-top .inputContainer::after {\r\n  content: '';\r\n  position: absolute;\r\n  background-color: white;\r\n  width: 2px;\r\n  height: 20px;\r\n  right: 0;\r\n  bottom: -15px;\r\n  transform: rotateZ(-45deg);\r\n}\r\n\r\n.gallery-container {\r\n  width: 80%;\r\n  max-width: var(--max-width-pc);\r\n  margin-bottom: 50px;\r\n  position: relative;\r\n}\r\n\r\n.gallery-container > h4 {\r\n  margin-bottom: 70px;\r\n}\r\n\r\n.items {\r\n  display: flex;\r\n  column-gap: 20px;\r\n  row-gap: 40px;\r\n  flex-wrap: wrap;\r\n  justify-content: center;\r\n  min-height: 40vh;\r\n}\r\n\r\n.items > li {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  width: 20vw;\r\n  max-width: 200px;\r\n  min-width: 170px;\r\n  height: 400px;\r\n  position: relative;\r\n  color: black;\r\n  text-align: center;\r\n}\r\n\r\n.items > li .itemName {\r\n  max-height: 60px;\r\n  max-width: 90%;\r\n  overflow: hidden;\r\n}\r\n\r\n.form-section p {\r\n  font-weight: 600;\r\n  padding-bottom: 1rem;\r\n}\r\n\r\n.comments-and-username p {\r\n  font-size: 0.8rem;\r\n}\r\n\r\n.items > li .itemName p {\r\n  display: -webkit-box;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-line-clamp: 2;\r\n  overflow: hidden;\r\n  text-overflow: ellipsis;\r\n}\r\n\r\n.items > li::after {\r\n  border-radius: 7px;\r\n  position: absolute;\r\n  background-color: rgb(233, 233, 233);\r\n  width: 100%;\r\n  height: 85%;\r\n  bottom: 0;\r\n  content: '';\r\n  z-index: -1;\r\n}\r\n\r\n.meal-image img {\r\n  height: 100%;\r\n  background-size: contain;\r\n  background-position: center;\r\n}\r\n\r\n.items li img {\r\n  width: 120px;\r\n  height: 120px;\r\n  border: 5px solid white;\r\n  border-radius: 50%;\r\n  box-shadow: 0 0 20px black;\r\n  margin-bottom: 10px;\r\n}\r\n\r\n.tags-container {\r\n  display: flex;\r\n  list-style: none;\r\n  flex-wrap: wrap;\r\n  justify-content: center;\r\n}\r\n\r\n.tags-container li {\r\n  width: max-content;\r\n  margin: 5px;\r\n  padding: 2px 10px;\r\n  background-color: var(--red);\r\n  color: white;\r\n  border-radius: 30px;\r\n}\r\n\r\n.line {\r\n  width: 90%;\r\n  height: 2px;\r\n  background-color: #1b1b1b14;\r\n  margin: 10px 0;\r\n  margin-top: auto;\r\n}\r\n\r\n.interactions {\r\n  width: 100%;\r\n  display: flex;\r\n  align-items: center;\r\n  color: var(--red);\r\n  justify-content: space-between;\r\n  padding-right: 10px;\r\n}\r\n\r\n.like-count {\r\n  position: absolute;\r\n  left: calc(var(--heart-size) - 15px);\r\n}\r\n\r\n.pagination {\r\n  list-style: none;\r\n  display: flex;\r\n  justify-content: end;\r\n  margin-top: 20px;\r\n}\r\n\r\n.pagination li {\r\n  cursor: pointer;\r\n  width: 35px;\r\n  height: 35px;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  font-size: 20px;\r\n  border: 2px solid white;\r\n  transition: 0.3s ease-in-out;\r\n}\r\n\r\n.social-icon-and-name ul li {\r\n  padding-inline: 0.5rem;\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n\r\nnav li:hover {\r\n  transform: scale(1.1);\r\n}\r\n\r\n.pagination li:hover {\r\n  background-color: rgba(255, 255, 255, 0.407);\r\n}\r\n\r\n.pagination li:nth-last-child(1) {\r\n  border-radius: 0 8px 8px 0;\r\n}\r\n\r\n.pagination li:nth-child(1) {\r\n  border-radius: 8px 0 0 8px;\r\n}\r\n\r\n.pagination .selectedPage {\r\n  pointer-events: none;\r\n  background-color: white;\r\n  color: black;\r\n}\r\n\r\n/* ------------------------------ Like button ------------ */\r\n.like {\r\n  cursor: pointer;\r\n}\r\n\r\n.hearth {\r\n  background-image: url('https://assets.codepen.io/23500/Hashflag-AppleEvent.svg');\r\n  background-size: calc(var(--heart-size) * var(--frames)) var(--heart-size);\r\n  background-repeat: no-repeat;\r\n  background-position-x: calc(var(--heart-size) * (var(--frames) * -1 + 1));\r\n  background-position-y: calc(var(--heart-size) * 0.02);\r\n  width: var(--heart-size);\r\n  height: var(--heart-size);\r\n  transition: 0.3s ease-in-out;\r\n}\r\n\r\n.hearth:hover {\r\n  transform: scale(1.1);\r\n}\r\n\r\ninput:checked + .hearth {\r\n  animation: like 1s steps(calc(var(--frames) - 3));\r\n  animation-fill-mode: forwards;\r\n}\r\n\r\n@keyframes like {\r\n  0% {\r\n    background-position-x: 0;\r\n  }\r\n\r\n  100% {\r\n    background-position-x: calc(var(--heart-size) * (var(--frames) * -1 + 3));\r\n  }\r\n}\r\n\r\n/* ****************popup************* */\r\n.comment-btn {\r\n  cursor: pointer;\r\n  transition: 0.3s ease-in-out;\r\n}\r\n\r\n.comment-btn:hover {\r\n  transform: scale(1.1);\r\n}\r\n\r\n\r\n.popup {\r\n  position: fixed;\r\n  padding: 2rem;\r\n  top: 50%;\r\n  left: 50%;\r\n  transform: translate(-50%, -50%);\r\n  width: 100%;\r\n  min-height: 100vh;\r\n  backdrop-filter: blur(8px);\r\n  display: none;\r\n  align-items: center;\r\n  justify-content: center;\r\n}\r\n\r\n.popup-card {\r\n  position: relative;\r\n  background-color: rgb(255, 255, 255, 0.85);\r\n  border-radius: 7px;\r\n  border-top-right-radius: 20vh;\r\n  height: 85vh;\r\n  width: 100%;\r\n  color: #1b1b1b;\r\n  padding: 3rem 2rem;\r\n}\r\n\r\n#closeBtn {\r\n  position: absolute;\r\n  top: 1rem;\r\n  left: 1rem;\r\n  width: 2rem;\r\n  cursor: pointer;\r\n}\r\n\r\n#closeBtn:hover {\r\n  transform: scale(1.1);\r\n}\r\n\r\n.meal-image {\r\n  position: absolute;\r\n  right: 0;\r\n  top: 0;\r\n  max-width: 50%;\r\n  height: 50%;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n}\r\n\r\n.popup-card h2 {\r\n  font-weight: 100;\r\n  color: #454545;\r\n}\r\n\r\n.food-name {\r\n  font-weight: 700;\r\n  font-size: 3rem;\r\n}\r\n\r\n.food-ingredients span {\r\n  background-color: #de7800;\r\n  border-radius: 10px;\r\n  color: #fff;\r\n  font-size: 0.8rem;\r\n  padding-inline: 0.4rem;\r\n  margin-right: 0.5rem;\r\n  box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.5);\r\n}\r\n\r\nbutton {\r\n  margin-top: 1rem;\r\n  border: 2px solid black;\r\n  outline: none;\r\n  border-radius: 13px;\r\n  padding-inline: 0.5rem;\r\n  margin-right: 1rem;\r\n}\r\n\r\n.comments-and-form-container {\r\n  display: flex;\r\n  align-items: flex-end;\r\n  padding: 2rem 0;\r\n}\r\n\r\n.comment-section {\r\n  min-width: 40%;\r\n  margin-right: 1rem;\r\n}\r\n\r\n.comment-section .comment {\r\n  font-weight: 600;\r\n  padding-bottom: 1rem;\r\n}\r\n\r\n.comments-and-username {\r\n  background-color: #1d0000;\r\n  border-radius: 7px;\r\n  color: #fff;\r\n  height: 30vh;\r\n  overflow: hidden;\r\n  overflow-y: auto;\r\n  padding: 0.5rem;\r\n}\r\n\r\n.comments-and-username::-webkit-scrollbar {\r\n  width: 0.2em;\r\n}\r\n\r\n.comments-and-username::-webkit-scrollbar-track {\r\n  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n.comments-and-username::-webkit-scrollbar-thumb {\r\n  background-color: #ccc;\r\n  outline: 1px solid slategrey;\r\n  border-radius: 0.2em;\r\n}\r\n\r\n#addCommentForm {\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\n#addCommentForm input {\r\n  padding: 0.3rem;\r\n  border: 2px solid black;\r\n  font-size: 0.8rem;\r\n  outline: none;\r\n  width: 50%;\r\n  border-radius: 0.3rem;\r\n  margin-bottom: 1rem;\r\n}\r\n\r\n#addCommentForm textarea {\r\n  border: 2px solid black;\r\n  padding: 0.3rem;\r\n  border-radius: 0.3rem;\r\n}\r\n\r\n#submitBtn {\r\n  width: 40%;\r\n  padding: 0.2rem;\r\n  background-color: #de7800;\r\n  color: #fff;\r\n  border: none;\r\n  outline: none;\r\n  cursor: pointer;\r\n}\r\n", ""]);
+
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -912,6 +924,7 @@ const commentPopup = () => {
   </div>
   `;
 
+
   const closeBtn = document.getElementById('closeBtn');
   closeBtn.addEventListener('click', () => {
     const nav = document.getElementsByTagName('nav')[0];
@@ -920,6 +933,7 @@ const commentPopup = () => {
     nav.classList.remove('active');
     popupSection.style.display = 'none';
   });
+
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (commentPopup);
@@ -935,6 +949,25 @@ module.exports = __webpack_require__.p + "dbd38e1381da46300bce.png";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "9321bd6354f323fcc57a.png";
+
+
+/***/ }),
+/* 24 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const handleItemsCount = (array) => {
+    let count = 0
+    array.forEach(() => {
+        count += 1
+    });
+    return count
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (handleItemsCount);
 
 /***/ })
 ],
