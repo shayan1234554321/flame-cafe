@@ -25,6 +25,11 @@ body {
   overflow-x: hidden;
 }
 
+body.active {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
 h2 {
   font-size: 50px;
 }
@@ -45,6 +50,10 @@ nav {
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.816);
   z-index: 5;
+}
+
+nav.active {
+  z-index: -1;
 }
 
 nav > div {
@@ -397,6 +406,15 @@ input:checked + .hearth {
 }
 
 /* ****************popup************* */
+.comment-btn {
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.comment-btn:hover {
+  transform: scale(1.1);
+}
+
 
 .popup {
   position: fixed;
@@ -407,7 +425,7 @@ input:checked + .hearth {
   width: 100%;
   min-height: 100vh;
   backdrop-filter: blur(8px);
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
 }
@@ -428,6 +446,11 @@ input:checked + .hearth {
   top: 1rem;
   left: 1rem;
   width: 2rem;
+  cursor: pointer;
+}
+
+#closeBtn:hover {
+  transform: scale(1.1);
 }
 
 .meal-image {

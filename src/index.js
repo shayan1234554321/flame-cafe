@@ -94,6 +94,17 @@ const loadHtmlContent = (pageNum) => {
       // -------- comment --------
       const comment = document.createElement('span');
       comment.innerHTML = '<b>Comment</b>';
+      comment.className = 'comment-btn';
+
+      comment.addEventListener('click', () => {
+        const popupSection = document.querySelector('.popup');
+        const nav = document.getElementsByTagName('nav')[0];
+        const body = document.getElementsByTagName('body')[0];
+        body.className = 'active';
+        nav.className = 'active';
+        popupSection.style.display = 'flex';
+        commentPopup();
+      });
 
       interactions.append(label, likes, comment);
 
@@ -132,13 +143,6 @@ const loadHtmlPagination = () => {
     pagination.appendChild(li);
   }
 };
-
-// -------- event listeners  ------
-// const commentBtn = document.querySelectorAll('.comment');
-
-// commentBtn.forEach((button) => button.addEventListener('click', () => {
-commentPopup();
-// }));
 
 window.addEventListener('DOMContentLoaded', () => {
   searchByLetter(defaultSearchLetter).then((res) => {
