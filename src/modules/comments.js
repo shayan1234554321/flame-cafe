@@ -1,6 +1,5 @@
 import { giveComment, getComment } from './API.js';
 import commentsCounter from './commentsCounter.js';
-import success from './toast.js';
 
 const postComment = (id) => {
   const form = document.getElementById('addCommentForm');
@@ -9,7 +8,6 @@ const postComment = (id) => {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     giveComment(id, userName.value, comment.value);
-    success('Comment Added');
     const commentDisplay = document.querySelector('.comments-and-username');
     const p = document.createElement('p');
     const currentDate = new Date();
