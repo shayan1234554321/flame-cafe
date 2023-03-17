@@ -736,6 +736,7 @@ const linkedin = document.querySelectorAll('.linkedin');
 const download = document.getElementById('download');
 const arrowDown = document.getElementById('arrow-down');
 const landingImage = document.getElementById('landing-image');
+const mobMenu = document.getElementById('mob-menu');
 // ------------ setting src -----------------
 logo.src = _assets_logo_png__WEBPACK_IMPORTED_MODULE_0__;
 flameVideo.src = _assets_backgroundFlame_mp4__WEBPACK_IMPORTED_MODULE_8__;
@@ -743,12 +744,9 @@ download.src = _assets_download_png__WEBPACK_IMPORTED_MODULE_4__;
 landingImage.src = _assets_landing_image_png__WEBPACK_IMPORTED_MODULE_6__;
 arrowDown.src = _assets_arrow_down_png__WEBPACK_IMPORTED_MODULE_5__;
 landingBgFlare.src = _assets_landing_bg_flare_jpg__WEBPACK_IMPORTED_MODULE_7__;
-github[0].src = _assets_github_png__WEBPACK_IMPORTED_MODULE_1__;
-const mobMenu = document.getElementById('mob-menu');
-// ------------ setting src -----------------
 logo.src = _assets_logo_png__WEBPACK_IMPORTED_MODULE_0__;
 mobMenu.src = _assets_mob_menu_png__WEBPACK_IMPORTED_MODULE_9__;
-github[0].src = _assets_mob_menu_png__WEBPACK_IMPORTED_MODULE_9__;
+github[0].src = _assets_github_png__WEBPACK_IMPORTED_MODULE_1__;
 instagram[0].src = _assets_instagram_png__WEBPACK_IMPORTED_MODULE_2__;
 linkedin[0].src = _assets_linkedin_png__WEBPACK_IMPORTED_MODULE_3__;
 github[1].src = _assets_github_png__WEBPACK_IMPORTED_MODULE_1__;
@@ -1023,16 +1021,16 @@ const postComment = (id) => {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     (0,_API_js__WEBPACK_IMPORTED_MODULE_0__.giveComment)(id, userName.value, comment.value);
-    (0,_toast_js__WEBPACK_IMPORTED_MODULE_2__.success)("Comment Added")
+    (0,_toast_js__WEBPACK_IMPORTED_MODULE_2__["default"])('Comment Added');
     const commentDisplay = document.querySelector('.comments-and-username');
-    const p = document.createElement('p')
+    const p = document.createElement('p');
     const currentDate = new Date();
     const year = currentDate.getFullYear();
     const month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
     const day = currentDate.getDate().toString().padStart(2, '0');
     const formattedDate = `${year}-${month}-${day}`;
-    p.innerHTML = ` ${formattedDate} ${userName.value} ${comment.value} `
-    commentDisplay.appendChild(p)
+    p.innerHTML = ` ${formattedDate} ${userName.value} ${comment.value} `;
+    commentDisplay.appendChild(p);
     userName.value = '';
     comment.value = '';
   });
@@ -1061,7 +1059,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 const commentsCounter = (comment) => {
-  const counter = comment.filter((comments) => (typeof (comments.comment) === 'string' && comments.comment.length > 0 ));
+  const counter = comment.filter((comments) => (typeof (comments.comment) === 'string' && comments.comment.length > 0));
   console.log(comment);
   return counter.length;
 };
@@ -1074,13 +1072,13 @@ const commentsCounter = (comment) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "success": () => (/* binding */ success)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* eslint-disable no-undef */
-const success = (message) => {
-    console.log(message)
-    swal("Good job!", `${message}`, "success")
-}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (success = (message) => {
+  console.log(message);
+  swal('Good job!', `${message}`, 'success');
+});
 
 /***/ }),
 /* 33 */
