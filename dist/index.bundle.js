@@ -8,8 +8,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_importing_images_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(15);
 /* harmony import */ var _modules_API_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(26);
 /* harmony import */ var _modules_renderPopup_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(28);
-/* harmony import */ var _modules_pagination_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(32);
-
+/* harmony import */ var _modules_pagination_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(33);
 
 
 
@@ -972,8 +971,8 @@ const commentPopup = async (mealId) => {
       <div class="form-section">
         <p>Add a comment</p>
         <form id="addCommentForm">
-          <input type="text" placeholder="Your name" id="userName">
-          <textarea name="comment" form="addCommentForm" id="commentText" cols="30" rows="3" maxlength="500" placeholder="Your insights..."></textarea>
+          <input type="text" placeholder="Your name" id="userName" required>
+          <textarea name="comment" form="addCommentForm" id="commentText" cols="30" rows="3" maxlength="500" placeholder="Your insights..." required ></textarea>
           <button type="submit" id="submitBtn">SUBMIT</button>
         </form>
       </div>
@@ -1012,6 +1011,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _API_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(26);
 /* harmony import */ var _commentsCounter_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(31);
+/* harmony import */ var _toast_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(32);
+
 
 
 
@@ -1022,6 +1023,16 @@ const postComment = (id) => {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     (0,_API_js__WEBPACK_IMPORTED_MODULE_0__.giveComment)(id, userName.value, comment.value);
+    (0,_toast_js__WEBPACK_IMPORTED_MODULE_2__.success)("Comment Added")
+    const commentDisplay = document.querySelector('.comments-and-username');
+    const p = document.createElement('p')
+    const currentDate = new Date();
+    const year = currentDate.getFullYear();
+    const month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+    const day = currentDate.getDate().toString().padStart(2, '0');
+    const formattedDate = `${year}-${month}-${day}`;
+    p.innerHTML = ` ${formattedDate} ${userName.value} ${comment.value} `
+    commentDisplay.appendChild(p)
     userName.value = '';
     comment.value = '';
   });
@@ -1033,7 +1044,7 @@ const loadComments = async (id) => {
 
   if (res.length > 0) {
     const counter = (0,_commentsCounter_js__WEBPACK_IMPORTED_MODULE_1__["default"])(res);
-    commentDisplay.innerHTML = res.map((comments) => (typeof (comments.comment) === 'string' ? `<p> ${comments.creation_date} ${comments.username} : ${comments.comment}</p>` : '')).join('');
+    commentDisplay.innerHTML = res.map((comments) => ((typeof (comments.comment) === 'string' && comments.comment.length > 0) ? `<p> ${comments.creation_date} ${comments.username} : ${comments.comment}</p>` : '')).join('');
     const commentCounter = document.getElementById('commentId');
     commentCounter.innerHTML = `Comments ( ${counter} )`;
   }
@@ -1050,7 +1061,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 const commentsCounter = (comment) => {
-  const counter = comment.filter((comments) => typeof (comments.comment) === 'string');
+  const counter = comment.filter((comments) => (typeof (comments.comment) === 'string' && comments.comment.length > 0 ));
   console.log(comment);
   return counter.length;
 };
@@ -1059,6 +1070,20 @@ const commentsCounter = (comment) => {
 
 /***/ }),
 /* 32 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "success": () => (/* binding */ success)
+/* harmony export */ });
+/* eslint-disable no-undef */
+const success = (message) => {
+    console.log(message)
+    swal("Good job!", `${message}`, "success")
+}
+
+/***/ }),
+/* 33 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);

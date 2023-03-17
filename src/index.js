@@ -3,7 +3,6 @@ import './modules/importing-images.js';
 import {
   searchByLetter, searchByName, giveLike, getLike,
 } from './modules/API.js';
-
 import commentPopup from './modules/renderPopup.js';
 import handleItemsCount from './modules/pagination.js';
 
