@@ -8,7 +8,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_importing_images_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(15);
 /* harmony import */ var _modules_API_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(26);
 /* harmony import */ var _modules_renderPopup_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(28);
-/* harmony import */ var _modules_pagination_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(33);
+/* harmony import */ var _modules_pagination_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(32);
 
 
 
@@ -1009,8 +1009,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _API_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(26);
 /* harmony import */ var _commentsCounter_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(31);
-/* harmony import */ var _toast_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(32);
-
 
 
 
@@ -1021,7 +1019,6 @@ const postComment = (id) => {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     (0,_API_js__WEBPACK_IMPORTED_MODULE_0__.giveComment)(id, userName.value, comment.value);
-    (0,_toast_js__WEBPACK_IMPORTED_MODULE_2__["default"])('Comment Added');
     const commentDisplay = document.querySelector('.comments-and-username');
     const p = document.createElement('p');
     const currentDate = new Date();
@@ -1060,7 +1057,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 const commentsCounter = (comment) => {
   const counter = comment.filter((comments) => (typeof (comments.comment) === 'string' && comments.comment.length > 0));
-  console.log(comment);
   return counter.length;
 };
 
@@ -1068,20 +1064,6 @@ const commentsCounter = (comment) => {
 
 /***/ }),
 /* 32 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* eslint-disable no-undef */
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (success = (message) => {
-  console.log(message);
-  swal('Good job!', `${message}`, 'success');
-});
-
-/***/ }),
-/* 33 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
