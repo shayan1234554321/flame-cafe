@@ -1,5 +1,13 @@
 <a name="readme-top"></a>
 
+
+<div align="center">
+
+  <h3><b>Flame-cafe</b></h3>
+
+</div>
+
+
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -25,9 +33,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Leader Board] <a name="about-project"></a>
+# 📖 [Flame Cafe] <a name="about-project"></a>
 
-> The leader-board website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leader-board API service.
+> The Flame-cafe website displays Meals form an external API. It also allows visitors to like and make a comment. All data is preserved thanks to the external <a href="https://www.themealdb.com/api.php" >Meals DB API</a> service and <a href="https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270">involvement API</a> .
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -61,16 +69,20 @@
 
 ### Key Features <a name="key-features"></a>
 
-> Plain HTML with basic style
-> Use of webpack
+- [ ] Dynamic single page app with javascript
+- [ ] Use of webpack
+- [ ] Perfect Design
+- [ ] Live interaction through likes and comments
+- [ ] Pagination
+- [ ] Search option
+- [ ] Fully responsive - Mobile friendly
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo"></a>
-
-> <a href="https://shayan1234554321.github.io/Leader-board/dist/" >Live</a>
+## 🚀 Live Demo <a name="live-demo" href="https://shayan1234554321.github.io/flame-cafe/dist/" >Live</a>
+## 🚀 Video Recording Walkthrough <a name="video-demo" href="https://drive.google.com/file/d/1F8uA2WbNmRLdU4nqbE2Yz521Xz01zSji/view?usp=sharing">Visit Video Link</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -95,7 +107,7 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
-```git clone https://github.com/shayan1234554321/Leader-board.git```
+```git clone https://github.com/shayan1234554321/flame-cafe```
 
 - [ ] Open the file in your code editor
 
@@ -113,20 +125,14 @@ npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standa
 npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x
 ```
 
-- [ ] node_modules
-
-```
-npm install -g node-modules
-```
-
 - [ ] webpack
 
 ```
-npm install -g webpack
+npm install --save-dev webpack
 ```
 
 ```
-npm install -g webpack-cli
+npm install --save-dev webpack-cli
 ```
 
 - [ ] project dependencies
@@ -173,11 +179,17 @@ npm run deploy
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 Shayan
+👤 **Shayan**
 
 - GitHub: [@githubhandle](https://github.com/shayan1234554321)
 - Twitter: [@twitterhandle](https://twitter.com/shayan123455432)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/shayan-khan20/)
+
+👤 **Muhammed**
+
+- GitHub: [@githubhandle](https://github.com/muhammedb8826)
+- Twitter: [@twitterhandle](https://twitter.com/muhammedb8826)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/muhammed-berisso-a60783226/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -185,12 +197,8 @@ npm run deploy
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Create a new game using an API]**
-- [ ] **[Implement the "Refresh" button that will get all scores for a game created by you from the API]**
-- [ ] **[Implement the form "Submit" button that will save a score for a game created by you]**
-- [ ] **[Use async and await JavaScript features to consume the API]**
-- [ ] **[Better styling]**
-
+- [ ] **[Adding 'More' options]**
+- [ ] **[Working on comment popup styling]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -198,7 +206,7 @@ npm run deploy
 
 ## 🤝 Contributing <a name="contributing"></a>
 
-You can contribute to this project by writing an issue <a href="https://github.com/shayan1234554321/Leader-board.git/issues" >here</a>
+You can contribute to this project by writing an issue <a href="https://github.com/shayan1234554321/flame-cafe/issues" >here</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

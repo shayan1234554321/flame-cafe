@@ -3,9 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webpack Exercise</title>
+    <title>Flame Cafe</title>
 </head>
 <body>
-    
+    <nav>
+        <div>
+            <img id="logo" alt="Logo">
+            <ul>
+                <li class="selected" >HOME</li>
+                <li>SEARCH</li>
+                <li>MORE</li>
+            </ul>
+            <img id="mob-menu" alt="Mobile Menu Icon">
+        </div>
+    </nav>
+
+    <section class="landingPage" >
+        <div class="landingPageContainer">
+            <div class="left">
+                <h1>
+                    Flame Cafe
+                </h1>
+                <h2>Restaurant</h2>
+                <p>
+                    A restaurant is a commercial establishment where people go to eat and drink. It usually has a kitchen, dining area and menu.
+                </p>
+                <div class="buttons">
+                    <button>
+                        Mobile App <img alt="Download Icon" id="download">
+                    </button>
+                    <button>
+                        <a href="#gallery">
+                            Watch Below <img alt="Arrow icon" id="arrow-down">
+                        </a>
+                    </button>
+                </div>
+            </div>
+            <div class="right">
+                <img alt="Crunchy Food" id="landing-image">
+            </div>
+        </div>
+        <div class="dark"></div>
+        <video id="flame-video" loop autoplay muted></video>
+        <img alt="Flame image" id="flame">
+    </section>
+    <section class="gallery" id="gallery">
+        <div class="gallery-top" >
+            <h2>Our Gallery</h2>
+            <div class="inputContainer">
+                <form id="search">
+                    <input type="text" id="searchInput" placeholder="search" required minlength="1">
+                </form>
+            </div>
+        </div>
+        <div class="gallery-container">
+            <h4>Total: <span id="items-count" >0</span> </h4>
+            <ul class="items" id="items">
+                <!-- <li>       Example li for ease
+                    <img id="example" alt="">
+                    <h4 class="itemName" ><b> <p> Bakewell Tart </p> </b></h4>
+                    <h4>Dessert</h4>
+                    <ul class="tags-container" >
+                        <li>Tart</li>
+                        <li>Baking</li>
+                        <li>Meat</li>
+                    </ul>
+                    <div class="line"></div>
+                    <div class="interactions">
+                        <label class="like">
+                            <input style="display: none;" type="checkbox"/>
+                            <div class="hearth"></div>
+                        </label>
+                        <span class="like-count" id="234234" >12</span>
+                        <span> <b>Comment</b></span>
+                    </div>
+                </li> -->
+            </ul>
+            <ul class="pagination" id="pagination">
+            </ul>
+        </div>
+    </section>
+    <section class="popup" >
+       
+    </section>
+
+    <footer>
+        <div><b>Flame</b><span class="cafe-text"> Cafe</span></div>
+        <div class="footer-container">
+            <p class="license">&copy;MIT License</p>
+            <div class="social-icon-and-name">
+                <span>
+                    <p>Shayan</p>
+                    <ul>
+                        <li><a href="https://github.com/shayan1234554321"><img alt="github" class="github"></a></li>
+                        <li><a href="https://www.instagram.com/shayan_ali_bakhsh/"><img alt="instagram" class="instagram"></a></li>
+                        <li><a href="https://www.linkedin.com/in/shayan-khan20/"><img alt="linkedin" class="linkedin"></a></li>
+                    </ul>
+                </span>
+                <span>
+                    <p>Muhammed</p>
+                    <ul>
+                        <li><a href="https://github.com/muhammedb8826"><img alt="github" class="github"></a></li>
+                        <li><a href="https://www.instagram.com/muhammedb8826/"><img alt="instagram" class="instagram"></a></li>
+                        <li><a href="https://www.linkedin.com/in/muhammed-berisso-a60783226/"><img alt="linkedin" class="linkedin"></a></li>
+                    </ul>
+                </span>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
