@@ -217,6 +217,14 @@ button {
   margin-right: 1rem;
 }
 
+button:hover {
+  border: 2px solid #fff;
+  background-color: #de7800;
+  color: #fff;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 .buttons button {
   cursor: pointer;
   padding: 10px 20px;
@@ -621,9 +629,10 @@ input:checked + .hearth {
   position: relative;
   background-color: rgb(255, 255, 255, 0.85);
   border-radius: 7px;
-  border-top-right-radius: 20vh;
+  border-top-right-radius: 15vw;
   height: 85vh;
-  width: 100%;
+  width: 85%;
+  max-width: var(--max-width-pc);
   color: #1b1b1b;
   padding: 3rem 2rem;
 }
@@ -644,16 +653,20 @@ input:checked + .hearth {
   position: absolute;
   right: 1rem;
   top: 1rem;
-  max-width: 35%;
+  width: 35%;
+  max-width: 370px;
   display: flex;
   border-radius: 50%;
   overflow: hidden;
   justify-content: center;
   align-items: center;
+  border: rgba(255, 255, 255, 0.329) 5px solid;
+  box-shadow: rgb(0, 0, 0, 0.7) 0 0 35px;
 }
 
 .popup-card h2 {
   font-weight: 100;
+  font-size: 2.5em;
   color: #454545;
 }
 
@@ -863,6 +876,7 @@ input:checked + .hearth {
 
   nav {
     height: 60px;
+    z-index: 2;
   }
 
   #mob-menu {
@@ -961,6 +975,46 @@ input:checked + .hearth {
   footer .footer-container {
     flex-wrap: wrap;
     row-gap: 10px;
+  }
+
+  .popup {
+    padding: 0 1rem;
+    z-index: 3;
+  }
+
+  .popup-card {
+    width: 100%;
+    border-top-right-radius: 20vw;
+    min-height: 96vh;
+    overflow-y: scroll;
+    padding: 1rem;
+  }
+
+  .popup-card h2 {
+    padding-top: 7rem;
+    font-size: 2em;
+  }
+
+  .food-name {
+    font-weight: 700;
+    font-size: 2em;
+  }
+
+  .comments-and-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  .comment-section {
+    order: 2;
+    padding-top: 0.5rem;
+  }
+
+  .form-section {
+    order: 1;
+    padding-top: 0.5rem;
   }
 }
 
