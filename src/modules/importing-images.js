@@ -19,6 +19,7 @@ const linkedin = document.querySelectorAll('.linkedin');
 const download = document.getElementById('download');
 const arrowDown = document.getElementById('arrow-down');
 const landingImage = document.getElementById('landing-image');
+const mobMenu = document.getElementById('mob-menu');
 // ------------ setting src -----------------
 logo.src = logoImg;
 flameVideo.src = backgroundFlame;
@@ -26,12 +27,9 @@ download.src = downloadImg;
 landingImage.src = landingImageImg;
 arrowDown.src = arrowDownImg;
 landingBgFlare.src = landingBgFlareImg;
-github[0].src = githubImg;
-const mobMenu = document.getElementById('mob-menu');
-// ------------ setting src -----------------
 logo.src = logoImg;
 mobMenu.src = mobMenuImg;
-github[0].src = mobMenuImg;
+github[0].src = githubImg;
 instagram[0].src = instagramImg;
 linkedin[0].src = linkedinImg;
 github[1].src = githubImg;
