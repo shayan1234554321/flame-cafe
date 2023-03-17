@@ -3,7 +3,7 @@
 
 <div align="center">
 
-  <h3><b>Capstone Project 2 | Flame-cafe</b></h3>
+  <h3><b>Flame-cafe</b></h3>
 
 </div>
 
@@ -35,7 +35,7 @@
 
 # 📖 [Flame Cafe] <a name="about-project"></a>
 
-> The Flame-cafe website displays Meals form an external API. It also allows visitors to like, make a comment and reservation. All data is preserved thanks to the external Meals DB API service.
+> The Flame-cafe website displays Meals form an external API. It also allows visitors to like and make a comment. All data is preserved thanks to the external <a href="" >Meals DB API</a> service and <a href="">involvement API</a> .
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -69,16 +69,20 @@
 
 ### Key Features <a name="key-features"></a>
 
-> Dynamic single page app with javascript
-> Use of webpack
+- [ ] Dynamic single page app with javascript
+- [ ] Use of webpack
+- [ ] Perfect Design
+- [ ] Live interaction through likes and comments
+- [ ] Pagination
+- [ ] Search option
+- [ ] Fully responsive - Mobile friendly
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo"></a>
-
-> Coming soon!</a>
+## 🚀 Live Demo <a name="live-demo" href="https://shayan1234554321.github.io/flame-cafe/dist/" >Live</a>
+## 🚀 Video Recording Walkthrough <a name="video-demo" href="https://drive.google.com/file/d/1F8uA2WbNmRLdU4nqbE2Yz521Xz01zSji/view?usp=sharing">Visit Video Link</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -194,6 +198,7 @@ npm run deploy
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **[Adding 'More' options]**
+- [ ] **[Working on comment popup styling]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
