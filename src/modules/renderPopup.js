@@ -30,8 +30,8 @@ const commentPopup = async (mealId) => {
       <div class="form-section">
         <p>Add a comment</p>
         <form id="addCommentForm">
-          <input type="text" placeholder="Your name" id="userName">
-          <textarea name="comment" form="addCommentForm" id="commentText" cols="30" rows="3" maxlength="500" placeholder="Your insights..."></textarea>
+          <input type="text" placeholder="Your name" id="userName" required>
+          <textarea name="comment" form="addCommentForm" id="commentText" cols="30" rows="3" maxlength="500" placeholder="Your insights..." required ></textarea>
           <button type="submit" id="submitBtn">SUBMIT</button>
         </form>
       </div>
